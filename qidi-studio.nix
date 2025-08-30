@@ -1,6 +1,7 @@
 {
   pkgs,
   appimageTools,
+  lib,
   ...
 }: 
 
