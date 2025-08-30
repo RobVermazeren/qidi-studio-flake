@@ -8,11 +8,11 @@
 let
   appname = "QIDIStudio";
   pname = "qidi-studio";
-  version = "v2.02.00.61";
+  version = "2.02.00.61";
   architecture = "x86_64";
 
   src = pkgs.fetchurl {
-    url = "https://github.com/QIDITECH/${appname}/releases/download/${version}/${appname}_${version}_Ubuntu24.AppImage";
+    url = "https://github.com/QIDITECH/${appname}/releases/download/v${version}/${appname}_${version}_Ubuntu24.AppImage";
     hash = "sha256:e68443c5de3151642f8b987e0d8c8b027a3d9e2a33a315f13d895f0201d64cfc";
   };
   appimageContents = appimageTools.extract {inherit pname version src;};
