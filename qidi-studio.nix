@@ -20,9 +20,9 @@ in
   appimageTools.wrapType2 {
     inherit pname version src;
 
-    extraPkgs = pkgs: [
-    webkitgtk_4_1
-  ];
+    runtimeInputs = with pkgs; [
+      webkitgtk_4_1
+    ];
 
     extraInstallCommands = ''
       install -m 444 -D ${appimageContents}/${appname}.desktop $out/share/applications/${appname}.desktop
