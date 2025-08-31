@@ -20,6 +20,10 @@ in
   appimageTools.wrapType2 {
     inherit pname version src;
 
+    extraPkgs = pkgs: [
+    webkitgtk_4_1
+  ];
+
     extraInstallCommands = ''
       install -m 444 -D ${appimageContents}/${appname}.desktop $out/share/applications/${appname}.desktop
       install -m 444 -D ${appimageContents}/${appname}.png $out/share/icons/hicolor/512x512/apps/${appname}.png
